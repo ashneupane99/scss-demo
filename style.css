@@ -1,0 +1,27 @@
+.wrapper {
+  background: blue;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-nav .logo {
+  background: white;
+  transform: rotate(rotate(30deg));
+  background: red;
+}
+.top-nav .menu {
+  color: brown;
+}
+.top-nav .menu ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+.top-nav .menu li:hover {
+  transform: scale(1.5);
+  transition: all 0.5s;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

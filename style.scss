@@ -1,0 +1,53 @@
+// importing variables with functions from diff page _base.scss 
+@use "base";
+
+
+// :root{
+//     --meroColor: pink; 
+
+// }
+
+$primarycolor: yellow;
+// The codes above are both same which lets us create our code for any color we want so if change is needed in the future we can just change the color we have created. can be used for other features such as font size etc. 
+
+
+//mixing syntax
+@mixin transform ($deg, $clr){
+    transform: rotate($deg);
+   background: $clr;
+}
+
+
+.wrapper {
+    // background: $primarycolor;
+    background: base.$ashcolor; //used variable from _base.scss page
+}
+// The following code is example of nesting which cannot be done is Css. 
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+.logo{
+    background: white;
+    @include transform(rotate(30deg), red);
+ } 
+ 
+ .menu{
+    color: brown;
+     
+    ul{
+        display: flex;
+        list-style: none;
+        gap: 1rem;
+    }
+
+    li{
+        &:hover{
+            transform: scale(1.5);
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+    }
+ }
+}
